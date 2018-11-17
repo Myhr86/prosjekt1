@@ -1,0 +1,384 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70px 700px 700px 700px 700px;
+  grid-template-areas: "nav"
+                       "header"
+                       "main"
+                       "boxes"
+                      "footer"
+}
+.boxes {
+  display: grid;
+  grid-template-columns: 50%;
+  grid-template-rows: 700px 700px;
+  grid-template-areas: "box1 box2"
+}
+footer {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 200px 400px;
+  grid-template-areas:  "footerHeader footerHeader"
+                        "footerBox1 footerBox2"
+}
+nav {
+  grid-area: nav;
+  background-color: black;
+}
+header {
+  grid-area: header;
+  position: relative;
+  background: black;
+}
+header img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+main {
+  position: relative;
+  grid-area: main;
+  background: #000001;
+}
+.boxes {
+  grid-area: boxes;
+  background: pink;
+}
+footer {
+  position: relative;
+  grid-area: footer;
+  background: black;
+  display: grid;
+}
+.box1 {
+  background: black;
+  position: relative;
+}
+.box1 img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.box2 {
+  background: black;
+  position: relative;
+}
+.box2 img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.footerHeader {
+  grid-area: footerHeader;
+  margin-top: 1%;
+}
+.footerBox1 {
+  grid-area: footerBox1;
+  background: green;
+  margin-left: 80px;
+}
+.footerBox2 {
+  grid-area: footerBox2;
+  background: black;
+  position: relative;
+}
+.footerBox2 p {
+  color: white;
+  padding-left: 20px;
+}
+.footerBox2 h4 {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+.footerHeadline {
+  font-size: 40px;
+  font-family: 'Quattrocento', serif;
+  text-transform: uppercase;
+  margin-left: 40%;
+  opacity: 0.9;
+}
+#copyRight {
+  position: absolute;
+  color: white;
+  top: 93%;
+  right: 2%;
+  font-family: 'Quattrocento', serif;
+}
+#copyRightMobile {
+  display: none;
+}
+.adress {
+  position: absolute;
+  top: 0;
+  left: 53%;
+}
+.adress h4 {
+  font-family: 'Quattrocento', serif;
+}
+.adress p {
+  font-family: 'Merriweather', serif;
+}
+.open {
+  position: absolute;
+  left: 80%;
+  top: 0;
+}
+.open h4 {
+  font-family: 'Quattrocento', serif;
+}
+.open p {
+  font-family: 'Merriweather', serif;
+}
+h1 {
+  font-family: 'Quattrocento', serif;
+  position: absolute;
+  top: 26%;
+  left: 33%;
+  color: white;
+  font-size: 70px;
+  opacity: 0.9;
+}
+h2 {
+  font-family: 'Quattrocento', serif;
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+  padding-top: 11%;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+h4 {
+  color: white;
+}
+hr {
+  position: absolute;
+  color: white;
+  top: 43%;
+  width: 60%;
+  margin-left: 18%;
+}
+#hrstyle {
+  position: absolute;
+  color: white;
+  top: 31%;
+  width: 60%;
+  margin-left: 18%;
+}
+#box1 {
+  font-family: 'Quattrocento', serif;
+  position: absolute;
+  top: 33%;
+  left: 29%;
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+  transition: 2s;
+}
+#box2 {
+  font-family: 'Quattrocento', serif;
+  position: absolute;
+  top: 33%;
+  left: 29%;
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+}
+main p {
+  font-family: 'Merriweather', serif;
+  color: white;
+  opacity: 0.9;
+  margin-left: 25%;
+  width: 50%;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.9;
+}
+#main hr {
+  position: absolute;
+}
+nav {
+  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 7;
+}
+#icon {
+  position: absolute;
+  background: black;
+  width: 10%;
+  height: 100%;
+}
+#socialMedia {
+  z-index: 9;
+}
+ul {
+  padding-top: 8px;
+  margin-left: 63%;
+}
+li {
+  display: inline;
+}
+a {
+  text-decoration: none;
+  color: white;
+  padding-left: 3%;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 2s;
+}
+a:hover {
+  color: purple;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 400px 800px 800px 400px;
+    grid-template-areas: "nav"
+                         "header"
+                         "main"
+                         "boxes"
+                        "footer"
+  }
+  .boxes {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px;
+    grid-template-areas: "box1"
+                         "box2"
+  }
+  #icon {
+    position: absolute;
+    background: black;
+    width: 40%;
+    height: 100%;
+  }
+  .footerHeadline {
+    margin-top: 40%;
+    margin-left: 0%;
+    text-align: center;
+  }
+  ul {
+    padding-top: 8px;
+    margin-left: 46%;
+    margin-top: 25px;
+  }
+  li {
+    display: block;
+    padding-bottom: 3px;
+  }
+  a {
+    padding-left: 0%;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 400px;
+    grid-template-areas:  "footerHeader"
+                          "footerBox1"
+                          "footerBox2"
+  }
+  .adress {
+    position: relative;
+    top: 20px;
+    left: 0%;
+  }
+  .open {
+    position: absolute;
+    left: 49%;
+    top: 20px;
+  }
+  .adress p {
+    font-size: 0.9em;
+  }
+  .open p {
+    font-size: 0.9em;
+  }
+  #box1 {
+    position: absolute;
+    top: 33%;
+    left: 0%;
+    font-size: 60px;
+  }
+  #box2 {
+    position: absolute;
+    top: 33%;
+    left: 0%;
+    font-size: 60px;
+  }
+  .box1 {
+    background: black;
+    position: relative;
+  }
+  .box1 img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+  .box2 {
+    background: black;
+    position: relative;
+  }
+  .box2 img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+  .footerBox1 {
+    background: green;
+    margin-left: 0px;
+  }
+  .footerBox2 {
+    background: black;
+    position: relative;
+    height: 400px;
+  }
+  #copyRight {
+    display: none;
+  }
+  #copyRightMobile {
+    display: block;
+    position: absolute;
+    color: white;
+    bottom: 1%;
+    right: 2%;
+    font-family: 'Quattrocento', serif;
+    font-size: 0.9em;
+  }
+  hr {
+    position: absolute;
+    color: white;
+    top: 53%;
+    width: 80%;
+    margin-left: 13%;
+  }
+  #hrstyle {
+    top: 36%;
+    margin-left: 13%;
+    width: 80%;
+  }
+  h1 {
+    top: 26%;
+    left: 10%;
+    font-size: 60px;
+  }
+  h1:last-child {
+    color: blue;
+  }
+  #pAdjustMobile {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #mainHr {
+    display: none;
+  }

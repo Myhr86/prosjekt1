@@ -1,0 +1,34 @@
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 100px 500px 100px;
+  grid-template-areas: "header header header"
+                       "main middle aside"
+                       "footer footer footer"
+}
+header {
+  grid-area: header;
+  background: lightblue;
+  margin-bottom: 10px;
+}
+main {
+  grid-area: main;
+  background: yellow;
+}
+aside {
+  grid-area: aside;
+  background: green;
+}
+footer {
+  grid-area: footer;
+  margin-top: 10px;
+  background: purple;
+}
+.middle {
+  grid-area: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: lightgreen;
+}
