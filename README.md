@@ -1,5 +1,5 @@
-# Simple Shop php
+# Simple todolist for a industry company
 
-## A simple shop solution for recieving and reviewing orders.
+## 
 
-Made in php
+Made in php/mysql
